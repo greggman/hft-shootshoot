@@ -30,7 +30,17 @@
  */
 "use strict";
 
-var main = function(
+// Start the main app logic.
+requirejs([
+    'hft/commonui',
+    'hft/gameclient',
+    'hft/misc/dpad',
+    'hft/misc/input',
+    'hft/misc/misc',
+    'hft/misc/mobilehacks',
+    'hft/misc/touch',
+    '../bower_components/hft-utils/dist/audio',
+  ], function(
     CommonUI,
     GameClient,
     DPad,
@@ -109,19 +119,6 @@ var main = function(
     ],
   });
 
-};
+});
 
-// Start the main app logic.
-requirejs([
-    'hft/commonui',
-    'hft/gameclient',
-    'hft/misc/dpad',
-    'hft/misc/input',
-    'hft/misc/misc',
-    'hft/misc/mobilehacks',
-    'hft/misc/touch',
-    '../bower_components/hft-utils/dist/audio',
-  ],
-  main
-);
 

@@ -34,7 +34,18 @@ function $(id) {
   return document.getElementById(id);
 }
 
-var main = function(
+// Start the main app logic.
+requirejs([
+    'hft/gamesupport',
+    'hft/gameserver',
+    'hft/localnetplayer',
+    'hft/misc/input',
+    'hft/misc/misc',
+    'hft/misc/speedup',
+    '../bower_components/hft-utils/dist/audio',
+    '../bower_components/hft-utils/dist/entitysystem',
+    './playermanager',
+  ], function(
     GameSupport,
     GameServer,
     LocalNetPlayer,
@@ -156,21 +167,6 @@ var main = function(
   }
   GameSupport.run(globals, render);
 
-};
-
-// Start the main app logic.
-requirejs([
-    'hft/gamesupport',
-    'hft/gameserver',
-    'hft/localnetplayer',
-    'hft/misc/input',
-    'hft/misc/misc',
-    'hft/misc/speedup',
-    '../bower_components/hft-utils/dist/audio',
-    '../bower_components/hft-utils/dist/entitysystem',
-    './playermanager',
-  ],
-  main
-);
+});
 
 
