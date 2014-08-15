@@ -62,9 +62,7 @@ requirejs([
     return document.getElementById(id);
   }
 
-  g_client = new GameClient({
-    gameId: "shootshoot",
-  });
+  g_client = new GameClient();
 
   function handleScore() {
   };

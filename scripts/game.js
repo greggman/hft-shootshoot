@@ -139,9 +139,7 @@ requirejs([
 
   var server;
   if (globals.haveServer) {
-    server = new GameServer({
-      gameId: "shootshoot",
-    });
+    server = new GameServer();
     g_services.server = server;
     server.addEventListener('playerconnect', g_playerManager.startPlayer.bind(g_playerManager));
   }
