@@ -1,10 +1,9 @@
 {
   "name": "ShootShoot",
   "description": "A dual stick example",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "private": false,
-  "dependencies": {
-  },
+  "dependencies": {},
   "happyFunTimes": {
     "gameId": "shootshoot",
     "category": "example",
