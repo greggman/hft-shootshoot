@@ -99,9 +99,6 @@ requirejs([
     new DPad({element: $("dpadright")}),
   ];
 
-  var dpadSize0 = dpads[0].getSize();
-  var dpadSize1 = dpads[1].getSize();
-
   var sendPad = function(e) {
     if (globals.debug) {
       console.log("pad: " + e.pad + " dir: " + e.info.symbol + " (" + e.info.direction + ")");
@@ -121,13 +118,9 @@ requirejs([
     pads: [
       {
         referenceElement: $("dpadleft"),
-        offsetX: dpadSize0 / 2,
-        offsetY: dpadSize0 / 2,
       },
       {
         referenceElement: $("dpadright"),
-        offsetX: dpadSize1 / 2,
-        offsetY: dpadSize1 / 2,
       },
     ],
   });
